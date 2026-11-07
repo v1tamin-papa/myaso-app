@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>МЯСО</title>
+  <!-- SDK Telegram: даёт объект window.Telegram.WebApp (кто открыл, цвета, кнопки, вибрация) -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Экран загрузки -->
+  <section id="splash" class="splash">
+    <h1 class="title">[ МЯСО ]</h1>
+    <svg class="mark" viewBox="0 0 140 140" aria-hidden="true">
+      <line x1="70" y1="2" x2="70" y2="14" />
+      <line x1="70" y1="126" x2="70" y2="138" />
+      <polygon class="hex" points="70,14 118,42 118,98 70,126 22,98 22,42" />
+      <circle class="ring-bg" cx="70" cy="70" r="30" />
+      <circle class="ring" cx="70" cy="70" r="24" />
+      <polygon class="tri" points="52,60 88,60 70,90" />
+    </svg>
+    <p class="caption">ЗАГРУЗКА</p>
+  </section>
+
+  <!-- Главный экран -->
+  <main id="home" class="screen" hidden>
+    <header class="head">
+      <h1 class="title small">[ МЯСО ]</h1>
+      <p id="hello" class="hello"></p>
+    </header>
+    <nav id="sections" class="grid"></nav>
+  </main>
+
+  <!-- Экран раздела -->
+  <main id="section" class="screen" hidden>
+    <h2 id="section-title" class="section-title"></h2>
+    <div id="section-list" class="list"></div>
+  </main>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
